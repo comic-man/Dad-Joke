@@ -1,0 +1,12 @@
+<h1>Dad Jokes!</h1>
+<hr>
+<div class="container" *ngIf="joke">{{ joke.joke }}</div>
+<div class="list-container">
+    <p *ngFor="let joke of jokeList">{{ joke }}</p>
+</div>
+<button class="btn btn-primary" (click)="onGetJoke(joke)" type="button">
+  Get Dad Joke
+</button>
+<button class="btn btn-primary" (click)="onFavorite()" type="button">
+  Favorite this joke
+</button>
