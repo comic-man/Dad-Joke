@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DadServiceService } from './service/dad-service.service';
 
 @Component({
@@ -6,11 +6,15 @@ import { DadServiceService } from './service/dad-service.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Dad-joke';
   jokeList: string[] = [];
   joke: any;
   constructor(private dadService: DadServiceService) {}
+
+  ngOnInit() {
+    this.jokeList = JSON.parse(<string>localStorage.getItem('joke' ))
+  }
 
   onGetJoke(joke: string): void {
   this.dadService.getJoke().subscribe(joke => {
