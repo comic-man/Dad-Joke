@@ -1,1 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  background-image: URL(https://metro.co.uk/wp-content/uploads/2014/04/ad_132008476.jpg?quality=90&strip=all&zoom=1&resize=480%2C547);
+  opacity: .75;
+}

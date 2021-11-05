@@ -1,8 +1,8 @@
 <h1>Dad Jokes!</h1>
 <hr>
-<div class="container" *ngIf="joke">{{ joke.joke }}</div>
+<div class="container cc-look" *ngIf="joke">{{ joke.joke }}</div>
 <div class="list-container">
-    <p *ngFor="let joke of jokeList">{{ joke }}</p>
+    <p *ngFor="let joke of jokeList" class='cc-look'>{{ joke }}</p>
 </div>
 <button class="btn btn-primary" (click)="onGetJoke(joke)" type="button">
   Get Dad Joke

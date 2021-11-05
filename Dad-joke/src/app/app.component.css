@@ -4,3 +4,7 @@ h1{
 .list-container{
   float: right;
 }
+.cc-look {
+    background-color: black;
+    color: grey;
+}
