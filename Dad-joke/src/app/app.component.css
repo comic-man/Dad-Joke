@@ -6,8 +6,8 @@ h3{
 }
 .list-container{
   float: right;
+  max-width: 300px;
 }
 .cc-look {
-    background-color: black;
-    color: grey;
+    border: solid black 1px;
 }

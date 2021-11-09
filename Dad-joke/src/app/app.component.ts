@@ -8,12 +8,12 @@ import { DadServiceService } from './service/dad-service.service';
 })
 export class AppComponent implements OnInit {
   title = 'Dad-joke';
-  jokeList: string[] = [];
+  jokeList: any[] = [];
   joke: any;
   constructor(private dadService: DadServiceService) {}
 
   ngOnInit() {
-    this.jokeList = JSON.parse(<string>localStorage.getItem('joke' ))
+    this.jokeList = JSON.parse(<string>localStorage.getItem('joke' )) || [];
   }
 
   onGetJoke(joke: string): void {
@@ -25,8 +25,18 @@ export class AppComponent implements OnInit {
   }
 
   onFavorite() {
-    this.jokeList.push(this.joke.joke)
+    this.jokeList.push(this.joke)
     console.log(this.jokeList)
     localStorage.setItem('joke', JSON.stringify(this.jokeList));
+  }
+
+  onUnfavoriteJoke(id: string) {
+    this.jokeList = this.jokeList.filter(j => {
+      if (j.id === id) {
+        return false;
+      }
+      return true;
+    })
+
   }
 }
