@@ -4,9 +4,16 @@ h1{
 h3{
     text-align:right;
 }
-.list-container{
+.flex-container{
+  display: flex;
+  flex-direction: column;
+  background-color: DodgerBlue;
   float: right;
+}
+.list-container{
+  background-color: DodgerBlue;
   max-width: 300px;
+  border: solid black 1px;
 }
 .cc-look {
     border: solid black 1px;

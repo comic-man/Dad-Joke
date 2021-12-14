@@ -1,9 +1,9 @@
-
 <app-header></app-header>
 <h1>Dad Jokes!</h1>
 <hr />
 <h3>Make your Favorites List!</h3>
 <hr />
+<!--Favorite it-->
 <div
   class="container cc-look"
   *ngIf="joke"
@@ -12,6 +12,8 @@
 >
   {{ joke.joke }}
 </div>
+<!--list of jokes-->
+<div class="flex-container">
 <div *ngFor="let joke of jokeList; let i = index" class="list-container">
   <div>
     <span>{{joke.joke}}</span>
@@ -24,6 +26,8 @@
     </button>
   </div>
 </div>
+</div>
+<!--Get the jokes-->
 <button class="btn btn-dark" (click)="onGetJoke(joke)" type="button">
   Get Dad Joke
 </button>
